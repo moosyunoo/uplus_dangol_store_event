@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유플러스 유플WEEK 이벤트</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #fffaf5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo {
+      height: 50px;
+    }
+    .language-selector {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-button {
+      background-color: #f5c9d6;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+    .dropdown button {
+      display: block;
+      width: 100%;
+      border: none;
+      background: none;
+      padding: 0.5rem 1rem;
+      text-align: left;
+      cursor: pointer;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: #e91e63;
+      margin-top: 1rem;
+    }
+    .guide, .warning, .footer {
+      margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+    .btn {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="유플러스 로고" class="logo">
+    <div class="language-selector">
+      <button class="lang-button" onclick="toggleDropdown()">Language</button>
+      <div class="dropdown" id="langDropdown">
+        <button onclick="setLanguage('ko')">한국어</button>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('vi')">Tiếng Việt</button>
+        <button onclick="setLanguage('zh')">中文</button>
+        <button onclick="setLanguage('ja')">日本語</button>
+      </div>
+    </div>
+  </header>
+  <img src="main.jpg" alt="이벤트 메인 이미지" class="main-image">  <h1 id="main-text">통신사 상관 없이 단골등록하고 다이소, 메가리카노, 파리바게트 3천원 쿠폰 받자!</h1>  <div class="guide" id="guide-text">
+    <strong>참여 순서 안내</strong><br>
+    1) 단골 등록 버튼으로 단골 등록 진행.<br>
+    2) 유플위크 이벤트 참여 시 매장은 반드시 일반매장,대전,서구, 도안목원대점 선택.<br>
+    3) P코드는 P844271, 직원 이름은 문선욱으로 입력.<br>
+    4) 이벤트 참여 후 010-8003-4046 번호로 이름 적어서 문자 발송.
+  </div>  <div class="warning" id="warning-text">
+    <strong>문자로 성명 오기재,미기재 시 쿠폰 발송 불가.</strong>
+  </div>  <div class="buttons">
+    <button class="btn" onclick="window.open('https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=d2ludGVyMyYyMDI1MDExNjA1NTYxNyZRUkNEXw==')">단골 등록 하러가기</button>
+    <button class="btn" onclick="window.open('https://www.uplusweek.co.kr/promotion?utm_campign=u24week0&utm_source=experience&utm_medium=storetable_back_qr_non_owend&utm_content=imgexperienceback_fm%20&utm_term=non')">유플위크 이벤트1</button>
+    <button class="btn" onclick="window.open('https://open.kakao.com/o/skqT8Fph')">요금제 상담 및 문의</button>
+    <button class="btn" onclick="window.open('https://www.uplusweek.co.kr/')">유플위크 이벤트2</button>
+  </div>  <div class="footer">
+    쿠폰 발송 시간 : 매일 오전 10시 ~ 오후 8시<br>
+    매장 위치 : LG유플러스 도안동 목원대점 대전 서구 동서대로 700 FM프라임타워 1층 102호<br>
+    <a href="https://naver.me/G1wlkqcu" target="_blank">[지도보기]</a>
+  </div>  <script>
+    const translations = {
+      ko: {
+        main: "통신사 상관 없이 단골등록하고 다이소, 메가리카노, 파리바게트 3천원 쿠폰 받자!",
+        guide: `참여 순서 안내<br>1) 단골 등록 버튼으로 단골 등록 진행.<br>2) 유플위크 이벤트 참여 시 매장은 반드시 일반매장,대전,서구, 도안목원대점 선택.<br>3) P코드는 P844271, 직원 이름은 문선욱으로 입력.<br>4) 이벤트 참여 후 010-8003-4046 번호로 이름 적어서 문자 발송.`,
+        warning: "문자로 성명 오기재,미기재 시 쿠폰 발송 불가."
+      },
+      en: {
+        main: "Register as a regular customer and get 3,000 KRW coupons for Daiso, Mega Coffee, and Paris Baguette!",
+        guide: `Participation Guide<br>1) Click the button to register.<br>2) Select General Store, Daejeon, Seo-gu, Doan Mokwon Branch during event participation.<br>3) Enter P-Code P844271 and staff name Moon Seonwook.<br>4) Send your name to 010-8003-4046 after participation.`,
+        warning: "Coupon will not be issued for incorrect or missing name in SMS."
+      },
+      vi: {
+        main: "Đăng ký khách quen và nhận phiếu giảm giá 3.000 KRW từ Daiso, Mega Coffee, Paris Baguette!",
+        guide: `Hướng dẫn tham gia<br>1) Nhấn nút để đăng ký khách quen.<br>2) Khi tham gia sự kiện, chọn Cửa hàng thông thường, Daejeon, Seo-gu, Chi nhánh Mokwon Doan.<br>3) Mã P: P844271, Tên nhân viên: Moon Seonwook.<br>4) Gửi tên bạn đến 010-8003-4046 sau khi tham gia.`,
+        warning: "Không thể gửi phiếu nếu tên bị sai hoặc không gửi qua SMS."
+      },
+      zh: {
+        main: "无论通信公司如何，注册常客即可获得大创、Mega咖啡、巴黎贝甜3000韩元优惠券！",
+        guide: `参与顺序指南<br>1）点击按钮进行常客注册。<br>2）参与U+WEEK活动时请选择普通店、大田、西区、道安牧园店。<br>3）输入P代码：P844271，员工姓名：文善旭。<br>4）参与活动后将姓名发送至010-8003-4046。`,
+        warning: "短信中姓名错误或未填写将无法发送优惠券。"
+      },
+      ja: {
+        main: "通信会社に関係なく常連登録して、ダイソー、メガコーヒー、パリバゲットの3,000ウォンクーポンをゲット！",
+        guide: `参加手順ガイド<br>1）ボタンをクリックして常連登録。<br>2）U+WEEKイベント参加時は一般店、大田、西区、ドアンモクウォン店を選択。<br>3）Pコード：P844271、スタッフ名：ムン・ソヌクを入力。<br>4）参加後、010-8003-4046に名前をSMSで送信。`,
+        warning: "SMSでの名前記載ミス・未記載時はクーポン送付不可。"
+      }
+    };
+
+    function toggleDropdown() {
+      const dropdown = document.getElementById('langDropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function setLanguage(lang) {
+      document.getElementById('main-text').innerHTML = translations[lang].main;
+      document.getElementById('guide-text').innerHTML = translations[lang].guide;
+      document.getElementById('warning-text').innerHTML = translations[lang].warning;
+      document.getElementById('langDropdown').style.display = 'none';
+    }
+  </script></body>
+</html>
