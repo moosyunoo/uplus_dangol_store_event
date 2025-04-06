@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ko">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,7 +40,7 @@
 <body class="p-4">
   <!-- Header -->
   <div class="flex justify-between items-center">
-    <img src="1743917137245-2.png" alt="U+ Logo" class="h-12">
+    <img src="1743917137245-2.png" alt="U+ Logo" class="h-8">
     <div class="relative">
       <button id="langToggle" class="rounded-button">Language</button>
       <div id="langMenu" class="lang-menu">
@@ -50,21 +51,41 @@
         <button onclick="setLang('ja')">日本語</button>
       </div>
     </div>
-  </div>  <!-- Main Image -->  <div class="text-center my-6">
+  </div>
+
+  <!-- Main Image -->
+  <div class="text-center my-6">
     <img src="1743917137245-1.png" alt="Main Banner" class="mx-auto rounded-xl">
-  </div>  <!-- Main Text -->  <h1 id="mainText" class="text-2xl md:text-4xl font-bold text-center text-pink-600 mb-6"></h1>  <!-- 참여 순서 안내 -->  <div>
+  </div>
+
+  <!-- Main Text -->
+  <h1 id="mainText" class="text-2xl md:text-4xl font-bold text-center text-pink-600 mb-6"></h1>
+
+  <!-- 참여 순서 안내 -->
+  <div>
     <h2 id="guideTitle" class="text-xl font-semibold mb-2"></h2>
     <ol id="guideList" class="list-decimal list-inside text-gray-800 space-y-1"></ol>
-  </div>  <!-- 주의사항 -->  <p id="warningText" class="mt-4 text-red-600 font-bold"></p>  <!-- Buttons -->  <div class="grid grid-cols-2 gap-4 my-8">
-    <a href="https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=d2ludGVyMyYyMDI1MDExNjA1NTYxNyZRUkNEXw==" class="rounded-button text-center">단골 등록 하러가기</a>
-    <a href="https://www.uplusweek.co.kr/promotion?utm_campign=u24week0&utm_source=experience&utm_medium=storetable_back_qr_non_owend&utm_content=imgexperienceback_fm%20&utm_term=non" class="rounded-button text-center">유플위크 이벤트1</a>
-    <a href="https://open.kakao.com/o/skqT8Fph" class="rounded-button text-center">상담 및 문의</a>
-    <a href="https://www.uplusweek.co.kr/" class="rounded-button text-center">유플위크 이벤트2</a>
-  </div>  <!-- Footer -->  <footer class="text-sm text-gray-700 text-center">
+  </div>
+
+  <!-- 주의사항 -->
+  <p id="warningText" class="mt-4 text-red-600 font-bold"></p>
+
+  <!-- Buttons -->
+  <div class="grid grid-cols-2 gap-4 my-8">
+    <a id="btn-register" href="https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=d2ludGVyMyYyMDI1MDExNjA1NTYxNyZRUkNEXw==" class="rounded-button text-center"></a>
+    <a id="btn-event1" href="https://www.uplusweek.co.kr/promotion?utm_campign=u24week0&utm_source=experience&utm_medium=storetable_back_qr_non_owend&utm_content=imgexperienceback_fm%20&utm_term=non" class="rounded-button text-center"></a>
+    <a id="btn-chat" href="https://open.kakao.com/o/skqT8Fph" class="rounded-button text-center"></a>
+    <a id="btn-event2" href="https://www.uplusweek.co.kr/" class="rounded-button text-center"></a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-sm text-gray-700 text-center">
     <p id="footerTime"></p>
     <p id="footerLocation"></p>
     <a id="mapText" href="https://naver.me/G1wlkqcu" class="text-blue-500 underline" target="_blank"></a>
-  </footer>  <script>
+  </footer>
+
+  <script>
     const langToggle = document.getElementById('langToggle');
     const langMenu = document.getElementById('langMenu');
     langToggle.addEventListener('click', () => {
@@ -84,83 +105,112 @@
         warningText: '문자로 성명 오기재, 미기재 시 쿠폰 발송 불가.',
         footerTime: '쿠폰 발송 시간 : 매일 오전 10시 ~ 오후 8시',
         footerLocation: '매장 위치 : LG유플러스 도안동 목원대점 대전 서구 동서대로 700 FM프라임타워 1층 102호',
-        mapText: '지도보기'
+        mapText: '지도보기',
+        btnRegister: '단골 등록 하러가기',
+        btnEvent1: '유플위크 이벤트1',
+        btnChat: '상담 및 문의',
+        btnEvent2: '유플위크 이벤트2'
       },
       en: {
-        mainText: 'Register as a regular customer regardless of your carrier and get 3,000 KRW coupons for Daiso, Mega Americano, and Paris Baguette!',
-        guideTitle: 'Participation Instructions',
+        mainText: 'Register as a regular customer regardless of carrier and get 3,000 KRW coupons for Daiso, Mega Americano, and Paris Baguette!',
+        guideTitle: 'Participation Steps',
         guideList: [
-          'Register as a regular customer using the button.',
-          'Select "General Store", "Daejeon", "Seo-gu", "Doan Mokwon Branch" for the U+ WEEK event.',
-          'Enter P code: P844271, Staff name: Moon Sunwook.',
-          'After participating, send your name via SMS to 010-8003-4046.'
+          'Click the button to register as a regular customer.',
+          'For U+ Week event, select General Store, Daejeon, Seo-gu, Doan Mokwon branch.',
+          'Enter P code: P844271 and staff name: Moon Sunwook.',
+          'After participating, send your name to 010-8003-4046 via SMS.'
         ],
-        warningText: 'Coupons will not be sent if the name is incorrect or missing in the text message.',
-        footerTime: 'Coupon delivery time: 10 AM – 8 PM daily',
-        footerLocation: 'Store Location: LG U+ Doan Mokwon Branch, 1st Floor, FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
-        mapText: 'View Map'
+        warningText: 'Coupons will not be sent if the name is missing or incorrect.',
+        footerTime: 'Coupon time: 10 AM - 8 PM daily',
+        footerLocation: 'Store: LG U+ Doan Mokwon Branch, 1F FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
+        mapText: 'View Map',
+        btnRegister: 'Go to Register',
+        btnEvent1: 'U+ Week Event 1',
+        btnChat: 'Chat / Inquiry',
+        btnEvent2: 'U+ Week Event 2'
       },
       vi: {
-        mainText: 'Đăng ký khách quen bất kể nhà mạng và nhận phiếu giảm giá 3,000 KRW cho Daiso, Mega Americano, và Paris Baguette!',
+        mainText: 'Đăng ký khách quen không cần biết nhà mạng và nhận phiếu giảm giá 3.000 KRW tại Daiso, Mega Americano, Paris Baguette!',
         guideTitle: 'Hướng dẫn tham gia',
         guideList: [
-          'Nhấn nút đăng ký khách quen để tiến hành đăng ký.',
-          'Khi tham gia sự kiện U+ WEEK, chọn cửa hàng thông thường tại Daejeon, Seo-gu, chi nhánh Doan Mokwon.',
-          'Nhập mã P: P844271, Tên nhân viên: Moon Sunwook.',
-          'Sau khi tham gia, gửi tên của bạn qua SMS đến 010-8003-4046.'
+          'Nhấn nút để đăng ký khách quen.',
+          'Tham gia sự kiện U+ Week, chọn cửa hàng General Store, Daejeon, Seo-gu, chi nhánh Doan Mokwon.',
+          'Nhập mã P: P844271, tên nhân viên: Moon Sunwook.',
+          'Sau khi tham gia, nhắn tin tên bạn đến 010-8003-4046.'
         ],
-        warningText: 'Không thể gửi phiếu nếu tên bị sai hoặc thiếu trong tin nhắn.',
-        footerTime: 'Thời gian gửi phiếu: 10 giờ sáng ~ 8 giờ tối hàng ngày',
-        footerLocation: 'Địa điểm: Cửa hàng LG U+ Doan Mokwon, Tầng 1, FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
-        mapText: 'Xem bản đồ'
+        warningText: 'Không gửi phiếu giảm giá nếu sai hoặc thiếu tên trong tin nhắn.',
+        footerTime: 'Thời gian gửi phiếu: 10:00 - 20:00 hàng ngày',
+        footerLocation: 'Địa điểm: LG U+ chi nhánh Doan Mokwon, tầng 1 FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
+        mapText: 'Xem bản đồ',
+        btnRegister: 'Đăng ký khách quen',
+        btnEvent1: 'Sự kiện U+ Week 1',
+        btnChat: 'Tư vấn / Hỏi đáp',
+        btnEvent2: 'Sự kiện U+ Week 2'
       },
       zh: {
-        mainText: '不限运营商，注册常客即可获得大创、Mega美式咖啡、巴黎贝甜3000韩元优惠券！',
-        guideTitle: '参与步骤指南',
+        mainText: '不论通信商，注册常客即可领取大创、Mega美式咖啡、巴黎贝甜3000韩元优惠券！',
+        guideTitle: '参与步骤',
         guideList: [
-          '点击“常客注册”按钮进行注册。',
-          '参加U+ WEEK活动时，请选择“一般门店、大田、西区、道安牧园店”。',
-          '输入P码：P844271，员工姓名：文善旭。',
-          '活动结束后，向010-8003-4046发送短信，注明您的姓名。'
+          '点击按钮注册为常客。',
+          '参加U+ Week活动时请选择普通门店、大田、西区、Doan Mokwon分店。',
+          '输入P代码：P844271，员工姓名：Moon Sunwook。',
+          '活动后将姓名短信发送至010-8003-4046。'
         ],
-        warningText: '如果短信中姓名填写错误或遗漏，将无法发送优惠券。',
-        footerTime: '优惠券发送时间：每天上午10点至晚上8点',
-        footerLocation: '店铺位置：LG U+ 道安牧园店，大田市西区东西大路700号 FM首席大厦1层102号',
-        mapText: '查看地图'
+        warningText: '如短信姓名错误或未填写，将无法发送优惠券。',
+        footerTime: '优惠券发送时间：每日10:00 - 20:00',
+        footerLocation: '门店地址：LG U+ Doan Mokwon分店，大田市西区东西大路700，FM Prime大厦1层102号',
+        mapText: '查看地图',
+        btnRegister: '去注册常客',
+        btnEvent1: 'U+ Week 活动1',
+        btnChat: '咨询 / 问答',
+        btnEvent2: 'U+ Week 活动2'
       },
       ja: {
-        mainText: '通信会社に関係なく常連登録して、ダイソー、メガアメリカーノ、パリバゲットの3,000ウォンクーポンをもらおう！',
-        guideTitle: '参加手順ガイド',
+        mainText: '通信会社に関係なく常連登録して、ダイソー、メガアメリカーノ、パリバゲットの3,000ウォンクーポンをゲットしよう！',
+        guideTitle: '参加手順のご案内',
         guideList: [
-          '「常連登録」ボタンを押して登録を行う。',
-          'U+ WEEKイベント参加時、店舗は「一般店舗、大田、西区、トアンモクウォン店」を選択。',
-          'Pコード：P844271、スタッフ名：ムン・ソヌクを入力。',
+          'ボタンをクリックして常連登録を進めます。',
+          'U+ Weekイベント参加時、「一般店舗、大田、西区、ドアン木元支店」を選択します。',
+          'Pコード：P844271、スタッフ名：Moon Sunwookを入力。',
           'イベント参加後、010-8003-4046に名前をSMSで送信。'
         ],
-        warningText: 'メッセージに名前が間違っている、または未記載の場合、クーポンは送信されません。',
-        footerTime: 'クーポン送信時間：毎日午前10時～午後8時',
-        footerLocation: '店舗住所：LG U+ トアンモクウォン店、大田市西区東西大路700 FMプライムタワー1階102号',
-        mapText: '地図を見る'
+        warningText: 'SMSに名前が間違っている、または未記載の場合、クーポンは送信されません。',
+        footerTime: 'クーポン送信時間：毎日午前10時〜午後8時',
+        footerLocation: '店舗住所：LG U+ ドアン木元店、大田市西区東西大路700、FMプライムタワー1階102号',
+        mapText: '地図を見る',
+        btnRegister: '常連登録する',
+        btnEvent1: 'U+ Week イベント1',
+        btnChat: '相談 / お問い合わせ',
+        btnEvent2: 'U+ Week イベント2'
       }
     };
 
     function setLang(lang) {
       const t = translations[lang];
-      document.getElementById('mainText').textContent = t.mainText;
-      document.getElementById('guideTitle').textContent = t.guideTitle;
+      document.getElementById('mainText').innerText = t.mainText;
+      document.getElementById('guideTitle').innerText = t.guideTitle;
+
       const guideList = document.getElementById('guideList');
       guideList.innerHTML = '';
       t.guideList.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = item;
+        li.innerText = item;
         guideList.appendChild(li);
       });
-      document.getElementById('warningText').textContent = t.warningText;
-      document.getElementById('footerTime').textContent = t.footerTime;
-      document.getElementById('footerLocation').textContent = t.footerLocation;
-      document.getElementById('mapText').textContent = t.mapText;
+
+      document.getElementById('warningText').innerText = t.warningText;
+      document.getElementById('footerTime').innerText = t.footerTime;
+      document.getElementById('footerLocation').innerText = t.footerLocation;
+      document.getElementById('mapText').innerText = t.mapText;
+
+      document.getElementById('btn-register').innerText = t.btnRegister;
+      document.getElementById('btn-event1').innerText = t.btnEvent1;
+      document.getElementById('btn-chat').innerText = t.btnChat;
+      document.getElementById('btn-event2').innerText = t.btnEvent2;
     }
 
-    setLang('ko'); // Default language
-  </script></body>
+    // 기본 언어 설정
+    setLang('ko');
+  </script>
+</body>
 </html>
