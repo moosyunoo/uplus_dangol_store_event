@@ -40,7 +40,9 @@
 <body class="p-4">
   <!-- Header -->
   <div class="flex justify-between items-center">
-    <img src="1743917137245-2.png" alt="U+ Logo" class="h-8">
+    <a href="https://www.lguplus.com/?utm_campaign=O25ushopmkt01pfm&utm_source=naver&utm_medium=bsa_brandsearch_impression_cpp&utm_content=text_homeandmobile_mo_homelink_S25%EC%9A%B8%ED%8A%B8%EB%9D%BC_2%EC%B0%A8&utm_term=non" target="_blank">
+      <img src="1743917137245-2.png" alt="U+ Logo" class="h-8">
+    </a>
     <div class="relative">
       <button id="langToggle" class="rounded-button">Language</button>
       <div id="langMenu" class="lang-menu">
@@ -86,12 +88,6 @@
   </footer>
 
   <script>
-    const langToggle = document.getElementById('langToggle');
-    const langMenu = document.getElementById('langMenu');
-    langToggle.addEventListener('click', () => {
-      langMenu.style.display = langMenu.style.display === 'block' ? 'none' : 'block';
-    });
-
     const translations = {
       ko: {
         mainText: '통신사 상관 없이 단골등록하고 다이소, 메가리카노, 파리바게트 3천원 쿠폰 받자!',
@@ -112,73 +108,73 @@
         btnEvent2: '유플위크 이벤트2'
       },
       en: {
-        mainText: 'Register as a regular customer regardless of carrier and get 3,000 KRW coupons for Daiso, Mega Americano, and Paris Baguette!',
-        guideTitle: 'Participation Steps',
+        mainText: 'Register as a regular customer and get 3,000 KRW coupons for Daiso, Mega Americano, and Paris Baguette!',
+        guideTitle: 'How to Participate',
         guideList: [
-          'Click the button to register as a regular customer.',
-          'For U+ Week event, select General Store, Daejeon, Seo-gu, Doan Mokwon branch.',
+          'Click the register button to register.',
+          'When participating in the U+ Week event, choose General Store, Daejeon, Seo-gu, Doan Mokwon branch.',
           'Enter P code: P844271 and staff name: Moon Sunwook.',
-          'After participating, send your name to 010-8003-4046 via SMS.'
+          'After participating, send your name via text to 010-8003-4046.'
         ],
-        warningText: 'Coupons will not be sent if the name is missing or incorrect.',
-        footerTime: 'Coupon time: 10 AM - 8 PM daily',
+        warningText: 'Coupons will not be issued if name is incorrect or missing.',
+        footerTime: 'Coupon hours: Daily 10 AM ~ 8 PM',
         footerLocation: 'Store: LG U+ Doan Mokwon Branch, 1F FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
         mapText: 'View Map',
-        btnRegister: 'Go to Register',
+        btnRegister: 'Register Now',
         btnEvent1: 'U+ Week Event 1',
         btnChat: 'Chat / Inquiry',
         btnEvent2: 'U+ Week Event 2'
       },
       vi: {
-        mainText: 'Đăng ký khách quen không cần biết nhà mạng và nhận phiếu giảm giá 3.000 KRW tại Daiso, Mega Americano, Paris Baguette!',
+        mainText: 'Đăng ký khách hàng thân thiết và nhận phiếu giảm giá 3.000 KRW cho Daiso, Mega Americano và Paris Baguette!',
         guideTitle: 'Hướng dẫn tham gia',
         guideList: [
-          'Nhấn nút để đăng ký khách quen.',
-          'Tham gia sự kiện U+ Week, chọn cửa hàng General Store, Daejeon, Seo-gu, chi nhánh Doan Mokwon.',
-          'Nhập mã P: P844271, tên nhân viên: Moon Sunwook.',
-          'Sau khi tham gia, nhắn tin tên bạn đến 010-8003-4046.'
+          'Nhấn nút để đăng ký khách hàng thân thiết.',
+          'Khi tham gia sự kiện U+ Week, chọn cửa hàng thường, Daejeon, Seo-gu, chi nhánh Doan Mokwon.',
+          'Nhập mã P: P844271 và tên nhân viên: Moon Sunwook.',
+          'Sau khi tham gia, gửi tin nhắn tên của bạn đến 010-8003-4046.'
         ],
-        warningText: 'Không gửi phiếu giảm giá nếu sai hoặc thiếu tên trong tin nhắn.',
-        footerTime: 'Thời gian gửi phiếu: 10:00 - 20:00 hàng ngày',
-        footerLocation: 'Địa điểm: LG U+ chi nhánh Doan Mokwon, tầng 1 FM Prime Tower, 700 Dongseo-daero, Seo-gu, Daejeon',
+        warningText: 'Không gửi phiếu nếu thiếu hoặc sai tên.',
+        footerTime: 'Thời gian gửi phiếu: 10:00 ~ 20:00 hàng ngày',
+        footerLocation: 'Địa chỉ cửa hàng: Chi nhánh LG U+ Doan Mokwon, tầng 1, tòa FM Prime, 700 Dongseo-daero, Seo-gu, Daejeon',
         mapText: 'Xem bản đồ',
-        btnRegister: 'Đăng ký khách quen',
+        btnRegister: 'Đăng ký ngay',
         btnEvent1: 'Sự kiện U+ Week 1',
-        btnChat: 'Tư vấn / Hỏi đáp',
+        btnChat: 'Tư vấn / Liên hệ',
         btnEvent2: 'Sự kiện U+ Week 2'
       },
       zh: {
-        mainText: '不论通信商，注册常客即可领取大创、Mega美式咖啡、巴黎贝甜3000韩元优惠券！',
+        mainText: '无论运营商，注册为常客即可获得大创、美式咖啡、巴黎贝甜3000韩元优惠券！',
         guideTitle: '参与步骤',
         guideList: [
           '点击按钮注册为常客。',
-          '参加U+ Week活动时请选择普通门店、大田、西区、Doan Mokwon分店。',
+          '参加U+ Week活动时，选择普通门店、大田、西区、Doan Mokwon分店。',
           '输入P代码：P844271，员工姓名：Moon Sunwook。',
-          '活动后将姓名短信发送至010-8003-4046。'
+          '参与后，请发送短信到010-8003-4046，附上姓名。'
         ],
-        warningText: '如短信姓名错误或未填写，将无法发送优惠券。',
-        footerTime: '优惠券发送时间：每日10:00 - 20:00',
-        footerLocation: '门店地址：LG U+ Doan Mokwon分店，大田市西区东西大路700，FM Prime大厦1层102号',
+        warningText: '姓名填写错误或未填写将无法发送优惠券。',
+        footerTime: '优惠券发送时间：每天上午10点 ~ 晚上8点',
+        footerLocation: '门店地址：大田市西区东西大路700号 FM Prime Tower 1层 102号 LG U+ Doan Mokwon店',
         mapText: '查看地图',
-        btnRegister: '去注册常客',
+        btnRegister: '立即注册',
         btnEvent1: 'U+ Week 活动1',
-        btnChat: '咨询 / 问答',
+        btnChat: '咨询 / 问询',
         btnEvent2: 'U+ Week 活动2'
       },
       ja: {
-        mainText: '通信会社に関係なく常連登録して、ダイソー、メガアメリカーノ、パリバゲットの3,000ウォンクーポンをゲットしよう！',
-        guideTitle: '参加手順のご案内',
+        mainText: '通信会社に関係なく、常連登録でダイソー・メガアメリカーノ・パリバゲットの3000ウォンクーポンをプレゼント！',
+        guideTitle: '参加手順',
         guideList: [
-          'ボタンをクリックして常連登録を進めます。',
-          'U+ Weekイベント参加時、「一般店舗、大田、西区、ドアン木元支店」を選択します。',
-          'Pコード：P844271、スタッフ名：Moon Sunwookを入力。',
-          'イベント参加後、010-8003-4046に名前をSMSで送信。'
+          'ボタンをクリックして常連登録を行う。',
+          'U+ Weekイベント参加時は、一般店舗、大田、西区、ドアンモクウォン店を選択。',
+          'Pコードは「P844271」、担当者名は「Moon Sunwook」と入力。',
+          '参加後、010-8003-4046に名前を記載してSMS送信。'
         ],
-        warningText: 'SMSに名前が間違っている、または未記載の場合、クーポンは送信されません。',
-        footerTime: 'クーポン送信時間：毎日午前10時〜午後8時',
-        footerLocation: '店舗住所：LG U+ ドアン木元店、大田市西区東西大路700、FMプライムタワー1階102号',
+        warningText: '名前の記入ミス・未記入時はクーポン送付不可。',
+        footerTime: 'クーポン送信時間：毎日10:00～20:00',
+        footerLocation: '店舗位置：大田市西区東西大路700 FMプライムタワー1階102号 LG U+ ドアンモクウォン店',
         mapText: '地図を見る',
-        btnRegister: '常連登録する',
+        btnRegister: '今すぐ登録',
         btnEvent1: 'U+ Week イベント1',
         btnChat: '相談 / お問い合わせ',
         btnEvent2: 'U+ Week イベント2'
@@ -208,6 +204,11 @@
       document.getElementById('btn-chat').innerText = t.btnChat;
       document.getElementById('btn-event2').innerText = t.btnEvent2;
     }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      const menu = document.getElementById('langMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
 
     // 기본 언어 설정
     setLang('ko');
